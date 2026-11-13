@@ -44,3 +44,10 @@ the returned strings can differ from the input strings.
   `IPv4Address`, `IPv6Address`, `IPv4Network`, or `IPv6Network`. Raises
   `TypeError` for non-strings and `ValueError` for malformed input or empty
   strings.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
