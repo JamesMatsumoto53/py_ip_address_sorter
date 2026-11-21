@@ -1,6 +1,6 @@
 [project]
 name = "py-ip-address-sorter"
-version = "0.1.1"
+version = "0.1.2"
 description = "Sorts mixed IPv4/IPv6 addresses and ranges numerically with the stdlib."
 requires-python = ">=3.10"
 dependencies = []
